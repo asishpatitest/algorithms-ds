@@ -1,7 +1,5 @@
 package quick_sort;
 
-import static org.apache.commons.lang3.ArrayUtils.swap;
-
 public class QuickSort {
 
     public static void quickSort(int arr[]) {
@@ -18,6 +16,12 @@ public class QuickSort {
             sort(arr, low, partition - 1);
             sort(arr, partition + 1, high);
         }
+    }
+
+    private static void swap(int arr[], int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
     }
 
     private static int partition(int arr[], int low, int high) {
